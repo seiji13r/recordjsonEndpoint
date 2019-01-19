@@ -1,9 +1,12 @@
 // Dependencies
-var express = require("express");
-var mongojs = require("mongojs");
+const express = require("express");
+const mongojs = require("mongojs");
 
 // Initialize Express
-var app = express();
+const app = express();
+
+// Define Listening PORT
+const PORT = process.env.PORT || 3000
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
@@ -19,7 +22,7 @@ const collections = ["jsons"];
 
 
 // Use mongojs to hook the database to the db variable
-var db = mongojs(databaseUrl, collections);
+const db = mongojs(databaseUrl, collections);
 
 // This makes sure that any errors are logged if mongodb runs into an issue
 db.on("error", function(error) {
@@ -67,6 +70,6 @@ app.get("/delete", (req, res) => {
 
 
 // Set the app to listen on port 3000
-app.listen(3000, function() {
-  console.log("App running on port 3000! http://localhost:3000");
+app.listen(PORT, function() {
+  console.log(`App running on port ${PORT}! http://localhost:${PORT}`);
 });
