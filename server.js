@@ -6,7 +6,7 @@ const mongojs = require("mongojs");
 const app = express();
 
 // Define Listening PORT
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
