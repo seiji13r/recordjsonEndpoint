@@ -1,0 +1,25 @@
+{
+  "name": "recordjsonEndpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seiji13r/recordjsonEndpoint.git"
+  },
+  "keywords": [],
+  "author": "Seiji Osada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seiji13r/recordjsonEndpoint/issues"
+  },
+  "homepage": "https://github.com/seiji13r/recordjsonEndpoint#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongojs": "^2.6.0"
+  }
+}
